@@ -1,3 +1,67 @@
+# ADM Panel - ReactJS and Firebase
+
+# Requirements
+
+- Node 20
+- Google billing account with registered credit card. (Required to use the Blaze version of Firebase - Per use). Functions do not work without this active plan. Does not generate initial cost
+
+# Panel Features
+
+- Users
+- Routes
+- Blog Posts
+- Blog Categories
+- Blog Authors
+- Completed Projects
+- Github Projects (Integration with Github, just configure with the Github Access Tokin in Settings)
+- Service Providers
+- Reports
+
+# Steps to run:
+
+- Create a Firebase project, enabling Firebase Hosting
+- Enable and create a Firestore database. When creating, define the Access Rules as test.
+- Enable and create the Realtime Database. Get and save the access link, something like:
+```sh
+https://admin-panel---teste-default-rtdb.firebaseio.com
+```
+- Enable Firebase Authentication, and login by email and password
+- In project settings->General Create a new Web application and get the firebaseConfig JSON to put in the React application
+- Put the firebaseConfig in the file:
+```sh
+src/config/firebase/index.js
+```
+- Add the databaseURL, which is the Realtime Database link, put it in firebaseConfig and in serviceAccountKey.json
+- In project settings->Service Accounts Generate a new serviceAccount private key to put in the application functions
+- Download the JSON and put it in:
+```sh
+functions/serviceAccountKey.json
+```
+- Change the name of the ProjectID in the files in the repository root: .firebaserc and firebase.json
+- Configure the Firebase CLI to deploy the functions and web application on Firebase Hosting
+
+- With the project and Firebase CLI all configured, install the node packages for the application and for the Firebase functions
+- Run NPM Install or yarn in the root of the application and in the /functions folder
+
+- Generate the first build, with the bat:
+```sh
+run_build.bat
+```
+- Once completed, do the first deploy with the Firebase CLI, which will upload the application to the Hosting and the functions, with the bat:
+```sh
+run_deploy.bat
+```
+- After the first deploy is completed, the application is 100% operational, to be used on the Hosting and locally
+
+- Open the application running locally, with the bat:
+```sh
+run_start.bat
+```
+- Open the application and do the first Login
+- Enter any email and password. It will be the Master email of the application.
+
+PORTUGUES
+
 # Painel ADM - ReactJS e Firebase
 
 # Requisitos

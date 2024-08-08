@@ -7,6 +7,15 @@
 
 # Funcionalidades do Painel
 
+- Usuários
+- Rotas
+- Blog Posts
+- Blog Categorias
+- Blog Autores
+- Projetos Concluidos
+- Projetos Github( Integração com o Github, basta configurar com o Tokin de Acesso Github em Configurações)
+- Prestadores de Serviços
+- Relatórios
 
 # Passos para rodar:
 
